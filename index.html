@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Atelier Poesie</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+  <img src="logo.png" alt="logo.png" />
+  <h1>ATELIER POESIE</h1>
+</div>
+
+    <nav>
+      <ul>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#resources">RESOURCES</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>ATELIER POESIE</h2>
+    <p class="est"><em>EST 2025</em></p>
+    <p class="tagline" id="animated-text">Where strategy meets soulful storytelling</p>
+    <a href="#services" class="cta-button">Explore our services</a>
+  </section>
+
+  <section id="services" class="services-section">
+    <h2 class="section-title">Our Services</h2>
+    <div class="service-cards">
+      <div class="service-card">
+        <h3>SOCIAL MEDIA AUDIT</h3>
+        <h4>Free Consultation</h4>
+        <p>
+          Gain clarity on how your brand shows up online with a free social media audit. We’ll review your content, visuals, and messaging to identify gaps and opportunities, so you can align your presence with your purpose and connect more meaningfully with your audience.
+        </p>
+        <p><strong>Social Media apps – Instagram, LinkedIn, YouTube</strong></p>
+        <a class="bounce-link" href="https://docs.google.com/forms/d/e/1FAIpQLSc-NmWYr6fSOl9Gf8HqTbYBHGgyS1WbiejCx9ySrF52ZRaN7A/viewform" target="_blank">Click here to book a free social media audit</a>
+      </div>
+
+      <div class="service-card">
+        <h3>BUILDING BRAND BLUEPRINT</h3>
+        <h4>The Brand Poem</h4>
+        <p>
+          Because every strong brand begins with the right words. A clear brand strategy gives your business direction, meaning, and coherence so every word, visual, and decision aligns with who you truly are. We’ll help you develop a clear brand strategy from the ground up.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>BUILDING BRAND IDENTITY</h3>
+        <h4>The Brand Palette</h4>
+        <p>
+          Where your story takes visual shape. This is where meaning becomes form. We craft a cohesive brand identity—from logo and color to typography and style—rooted in your brand’s essence. The result: a visual language that feels aligned, intentional, and instantly recognizable.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <h2>The Poetry of Branding</h2>
+    <p>
+      At Atelier Poesie, we believe that every brand has a story waiting to be told with the same care and artistry as a beautifully crafted poem. Our approach marries strategic thinking with creative intuition, ensuring your brand doesn't just communicate — it resonates.
+    </p>
+    <p>
+      Founded in 2025, we've dedicated ourselves to helping businesses discover their authentic voice and express it through compelling visual narratives. Whether you're a startup finding your footing or an established company ready for transformation, we craft bespoke brand experiences that captivate and convert.
+    </p>
+    <p><em>Every brand is a verse in the greater poem of human connection.</em></p>
+  </section>
+
+<section id="resources" class="resources-section">
+  <h2 class="section-title">Resources & Downloads</h2>
+  <p class="section-subtitle">Curated tools for soulful brand builders</p>
+
+  <div class="download-grid">
+    <div class="download-item">
+      <a href="downloads/soul-poetry-journal.pdf" download>
+        <img src="assets/icons/soul-poetry-icon.png" alt="Soul Poetry Journal">
+      </a>
+      <p>Soul Poetry Journal</p>
+    </div>
+
+    <div class="download-item">
+      <a href="downloads/brand-clarity-abell.pdf" download>
+        <img src="assets/icons/abell-icon.png" alt="Brand Clarity with Abell">
+      </a>
+      <p>Brand Clarity with Abell</p>
+    </div>
+
+    <div class="download-item">
+      <a href="downloads/brand-audit-kit.pdf" download>
+        <img src="assets/icons/brand-audit-icon.png" alt="Brand Audit Kit">
+      </a>
+      <p>Brand Audit Kit</p>
+    </div>
+  </div>
+</section>
+
+
+  <div id="flower-container"></div>
+
+  <script>
+    const text = "Where strategy meets soulful storytelling";
+    let i = 0;
+    const speed = 80;
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("animated-text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    document.getElementById("animated-text").innerHTML = "";
+    typeWriter();
+
+    const flowerContainer = document.getElementById("flower-container");
+    function createFlower() {
+      const flower = document.createElement("img");
+      flower.src = "flower.png";
+      flower.classList.add("flower");
+      flower.style.left = Math.random() * 100 + "vw";
+      flower.style.animationDuration = (3 + Math.random() * 3) + "s";
+      flowerContainer.appendChild(flower);
+      setTimeout(() => flower.remove(), 5000);
+    }
+    setInterval(createFlower, 600);
+  </script>
+<section id="contact" class="contact-section">
+  <h2>Let’s create something meaningful</h2>
+  <p class="contact-intro">
+    Whether you're ready to begin your brand journey or just exploring possibilities, we’d love to hear from you.
+  </p>
+
+  
+
+  <section id="contact">
+  <h2 class="section-title">Contact Us</h2>
+  <p class="section-subtitle">We're here to co-create something meaningful together.We'd love to hear from you. Fill out the form below and we’ll get back to you soon.</p>
+
+  <div class="form-container">
+   
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSejSV_psKDbm1E4grQ6gC--9R4jqgmjQ48dsk0TXFcME5JDNg/viewform?embedded=true"     
+      width="100%" 
+      height="1000" 
+      frameborder="0" 
+      marginheight="0" 
+      marginwidth="0"
+      style="border: none; border-radius: 12px;">
+      Loading…
+    </iframe>
+  </div>
+</section>
+
+
+</section>
+
+
+  <p class="contact-note">
+    You can also write to us directly at <a href="mailto:atelierpoesie1@gmail.com">atelierpoesie1@gmail.com</a>
+  </p>
+</section>
+
+</body>
+</html>
