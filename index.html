@@ -10,6 +10,15 @@
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Cormorant+Garamond:wght@300;400;500&family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1T04DLL22J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1T04DLL22J');
+  </script>
 </head>
 <body>
 
@@ -19,14 +28,13 @@
   <!-- Header -->
   <header>
     <div class="logo-title">
-      <!-- use the file you have in the repo -->
       <img src="logo.png" alt="Atelier Poesie Logo" />
       <h1>ATELIER POESIE</h1>
     </div>
     <nav>
       <ul>
         <li><a href="#services">SERVICES</a></li>
-        <li><a href="#resources">RESOURCES</a></li><!-- resources before about -->
+        <li><a href="#resources">RESOURCES</a></li>
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
@@ -68,13 +76,12 @@
     </div>
   </section>
 
-  <!-- Resources (UPDATED: icons + PDFs from repo folders) -->
+  <!-- Resources -->
   <section id="resources" class="resources-section">
     <h2 class="section-title">Resources & Downloads</h2>
     <p class="section-subtitle">Curated tools for soulful brand builders</p>
 
     <div class="download-grid">
-      <!-- Brand Audit Kit -->
       <div class="download-item">
         <a href="downloads/brand-audit-kit.pdf" download>
           <img src="icons/brand-audit-icon.png" alt="Brand Audit Kit icon">
@@ -82,7 +89,6 @@
         <p>Brand Audit Kit</p>
       </div>
 
-      <!-- Soul Poetry Journal -->
       <div class="download-item">
         <a href="downloads/soul-poetry-journal.pdf" download>
           <img src="icons/soul-poetry-icon.png" alt="Soul Poetry Journal icon">
@@ -90,7 +96,6 @@
         <p>Soul Poetry Journal</p>
       </div>
 
-      <!-- Brand Clarity with Abell -->
       <div class="download-item">
         <a href="downloads/brand-clarity-abell.pdf" download>
           <img src="icons/abell-icon.png" alt="Brand Clarity with Abell icon">
@@ -98,14 +103,6 @@
         <p>Brand Clarity with Abell</p>
       </div>
     </div>
-
-    <!-- (Optional) Blog/Articles section you planned can stay below if you had it -->
-    <!--
-    <div class="blog-section">
-      <h2 class="blog-title">Articles & Essays</h2>
-      ...
-    </div>
-    -->
   </section>
 
   <!-- About -->
@@ -116,7 +113,7 @@
     <p><em>Every brand is a verse in the greater poem of human connection.</em></p>
   </section>
 
-  <!-- Contact (embedded Google Form) -->
+  <!-- Contact -->
   <section id="contact" class="contact-section">
     <h2>Let’s Create Something Poetic</h2>
     <p class="contact-intro">Whether you're ready to begin your brand journey or just exploring possibilities, we’d love to hear from you.</p>
@@ -137,9 +134,9 @@
     </p>
   </section>
 
-  <!-- Scripts: hero typing + falling flowers -->
+  <!-- Scripts: typewriter + falling flowers -->
   <script>
-    // Typewriter for tagline (keeps your chosen text)
+    // Typewriter effect for tagline
     (function () {
       const el = document.getElementById('animated-text');
       const full = "Where strategy meets soulful storytelling";
@@ -154,7 +151,7 @@
       type();
     })();
 
-    // Falling flowers (uses flower.png)
+    // Falling flowers
     (function () {
       const container = document.getElementById("flower-container");
       function drop() {
